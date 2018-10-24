@@ -11,7 +11,7 @@
     <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>PhotoNest</title>
 </head>
 
 <body>
@@ -36,7 +36,7 @@
             </a>
             <li>
                 <i class="material-icons" id='addPhoto' onclick="smoothScroll(document.getElementById('video'))">
-                    <a href="">add_a_photo</a>
+                    <a href="photo-info.html">add_a_photo</a>
                 </i>
             </li>
             <li>
@@ -56,7 +56,14 @@
                     <a href="profile.html">
                         account_circle
                 </i>
-                </a>
+                    </a>
+            </li>
+            <li>
+                <i class="material-icons" id="signUp">
+                    <a href="form.html">
+                        add
+                    </a>
+                </i>
             </li>
         </ul>
     </div>
@@ -70,7 +77,7 @@
     </div>
     <div class='photo-container' id='userPhotos'>
         <h2>PHOTOS TAKEN HERE</h2>
-        <!-- <img src="../uploads/mathesonbridge.jpg"> -->
+        <div id='photoDiv'></div>
     </div>
     </div>
 
@@ -81,6 +88,7 @@
         type="text/javascript">
         </script>
     <script type="text/javascript" src="./js/index-load-photos.js"></script>
+
 </body>
 
 </html>

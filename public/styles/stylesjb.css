@@ -12,6 +12,7 @@
     transition: ease-in-out .5s;
     font-family: 'Lato', sans-serif;
     text-align: center;
+    z-index: 20;
 }
 
 .navbar ul li {
@@ -51,6 +52,7 @@ a:hover, a:active {
     text-decoration: none; 
     transform: scale(1.3);
 }
+
 /* --- targets aperature icon --- */
 #logo {
     font-size: 20px;
@@ -240,9 +242,10 @@ targets container */
      border-radius: 0;
      margin-bottom: 8px; 
      width: 90%;
+     
  }
-    [type="text"] {color:#ccc;}
-    [type="notes"] {color: #ccc;}
+    [type="text"] {color:#333333;}
+    [type="notes"] {color: #333333;}
   
   textarea {
     width: 90%;
@@ -258,7 +261,7 @@ targets container */
 /* --- Map container --- */
 .map-container {
     max-width: 75%;
-    height: 260px;
+    height: 150px;
     padding-left: 1rem;
     padding-right: 1rem;
     margin: 0 auto;
@@ -287,6 +290,14 @@ targets container */
     background: #232526;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
     
 }
+
+#map2 {
+    height: 600px;
+    width: 100%;
+    z-index: 5;
+    margin: 0;
+    top: 73%;
+}
+
