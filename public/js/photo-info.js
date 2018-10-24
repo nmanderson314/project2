@@ -78,7 +78,7 @@ $(document).ready(function() {
     };
 
     function handleFileUploadSubmit() {
-        // event.preventDefault();
+        event.preventDefault();
 
         var uploadTask = storageRef.child(`images/${selectedFile.name}`).put(selectedFile); //create a child directory called images, and place the file inside this directory
         uploadTask.on('state_changed', function (snapshot){
