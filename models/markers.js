@@ -1,10 +1,11 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) 
+{
     var Markers = sequelize.define("Markers", {
-      // Giving the Markers model a name of type STRING
+     
       id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
-        allowNull: false
+        autoIncrement: true,
       },
       name: {
         type: DataTypes.STRING,
