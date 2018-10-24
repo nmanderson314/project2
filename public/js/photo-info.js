@@ -35,11 +35,12 @@ $(document).ready(function() {
 
     function handleUpload(){
         event.preventDefault();
+
         var newUser = {
             name: $("#photogName").val().trim(),
             username: $("#username").val().trim(),
             email: $("#email").val().trim()
-        },
+        };
 
         function addUser(post, callback){
             console.log("adding user data");
@@ -66,10 +67,10 @@ $(document).ready(function() {
                     type: "Photo-Op",
                     lat: lat,
                     lng: lng
-                }
+                };
                 //callback now
                 callback(newLocation, addPhoto);
-            })
+            });
         };
 
         addUser(newUser, addMarker);
