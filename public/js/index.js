@@ -109,7 +109,16 @@ function initMap() {
 
 };
 
+$(document).on("click", "#map", populatePictures);
 
 
+function populatePictures(){
+    $.get("/api/photos", function (data){
+        console.log(data);
+        for (i=0; i < data.length; i++){
+            console.log(data.photo_url[i])
+        }
+    });
+};
 
 
