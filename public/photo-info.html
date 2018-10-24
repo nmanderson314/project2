@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="styles/stylesjb.css">
     <script src="https://code.jquery.com/jquery.js"></script>
+    
     <title>Profile</title>
 </head>
 <body>
@@ -68,7 +69,11 @@
               <label for="photogNotes">Notes</label>
               <textarea type="notes" placeholder="Photograher Notes" name="photogNotes" id="photogNotes" required>
               </textarea>
-            
+
+              <div id="filesubmit">
+                <input type="file" class="file-select" accept="image/*"/>
+                <button class="file-upload">Upload</button>
+              </div>
             </div>
         </form>
     </div>
@@ -100,6 +105,9 @@
     <!-- Commenting out because it causes errors -->
     <!-- <script type="text/javascript" src="profile.js"></script> -->
     <script type="text/javascript" src="./js/photo-info.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <!-- <script type="text/javascript" src="./js/firebase-upload.js"></script> -->
+
 
 </body>
 </html>
