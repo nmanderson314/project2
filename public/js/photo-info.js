@@ -9,6 +9,7 @@ $(document).ready(function() {
     firebase.initializeApp(config);
     
     
+    
     //global variables
     var storageService = firebase.storage();
     var storageRef = storageService.ref();
@@ -18,15 +19,18 @@ $(document).ready(function() {
     var selectedFile;
 
 
-    /* global moment */
- 
-    $(document).on("click", ".submit", handleUpload);
+    
     
     //firebase
     $(document).on("change", ".file-select", handleFileUploadChange);
     //
     $(document).on("click", ".file-upload", handleFileUploadSubmit);
 
+    /* global moment */
+ 
+    $(document).on("click", ".submit", handleUpload);
+
+    // document.querySelector('.file-select').addEventListener('change', handleFileUploadChange);
 
     function handleFileUploadChange(e) {
         selectedFile = e.target.files[0];
@@ -34,7 +38,7 @@ $(document).ready(function() {
 
     function handleUpload(){
         event.preventDefault();
-
+        console.log(`${FBURL} is the photoURL`)
         var newUser = {
             name: $("#photogName").val().trim(),
             username: $("#username").val().trim(),
@@ -85,7 +89,7 @@ $(document).ready(function() {
             console.log(snapshot);
             console.log(snapshot.downloadURL);
             FBURL = snapshot.downloadURL;
-            
+
             return FBURL;
         });
     };
