@@ -11,7 +11,7 @@ function populatePictures(){
             var pic = data[i].photo_url;
 
             //add to DOM
-            $("#photoDiv").append(`<img src="${pic}" style="width:500px;height:600px;">`);
+            $("#photoDiv").append(`<img src="${pic}" style="width:400px;height:400px;">`);
         }
     });
 };
