@@ -27,7 +27,6 @@ $(document).ready(function() {
     //
     $(document).on("click", ".file-upload", handleFileUploadSubmit);
 
-    // document.querySelector('.file-select').addEventListener('change', handleFileUploadChange);
 
     function handleFileUploadChange(e) {
         selectedFile = e.target.files[0];
@@ -86,6 +85,8 @@ $(document).ready(function() {
             console.log(snapshot);
             console.log(snapshot.downloadURL);
             FBURL = snapshot.downloadURL;
+            
+            return FBURL;
         });
     };
 
