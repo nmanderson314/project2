@@ -85,7 +85,6 @@ $(document).ready(function() {
             console.log(selectedFile);
             console.log(snapshot);
             console.log(snapshot.downloadURL);
-
             FBURL = snapshot.downloadURL;
         });
     };

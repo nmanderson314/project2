@@ -67,6 +67,7 @@ function initMap() {
     dataRead();
 
     function dataRead() {
+        console.log(`Display pictures`);
         $.get("/api/markers", function (data) {
 
             for (var i = 0; i < data.length; i++) {
