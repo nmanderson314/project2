@@ -38,7 +38,7 @@ $(document).ready(function() {
 
     function handleUpload(){
         event.preventDefault();
-        console.log(`${FBURL} is the photoURL`)
+
         var newUser = {
             name: $("#photogName").val().trim(),
             username: $("#username").val().trim(),
@@ -84,8 +84,12 @@ $(document).ready(function() {
         event.preventDefault();
 
         var uploadTask = storageRef.child(`images/${selectedFile.name}`).put(selectedFile); //create a child directory called images, and place the file inside this directory
+        console.log(`UPLOADTASK:
+        ${uploadTask}
+        `)
+
         uploadTask.on('state_changed', function (snapshot){
-            console.log(selectedFile);
+            console.log(`selectedFile logged: ${selectedFile}`);
             console.log(snapshot);
             console.log(snapshot.downloadURL);
             FBURL = snapshot.downloadURL;
