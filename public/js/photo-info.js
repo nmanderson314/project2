@@ -82,6 +82,9 @@ $(document).ready(function() {
 
     function handleFileUploadSubmit() {
         event.preventDefault();
+        console.log(`selected file : ${selectedFile}`)
+        console.log(`selected file name: ${selectedFile.name}`)
+
 
         var uploadTask = storageRef.child(`images/${selectedFile.name}`).put(selectedFile); //create a child directory called images, and place the file inside this directory
         console.log(`UPLOADTASK:
